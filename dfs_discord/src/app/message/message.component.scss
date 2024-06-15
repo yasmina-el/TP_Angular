@@ -1,0 +1,53 @@
+.liste-message {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-left: 5em;
+    margin-top: 5em;
+    overflow: auto;
+    width: 100%;
+
+    .message {
+      display: flex;
+      margin: 1em;
+      border-bottom: 1px solid #585858;
+
+      .avatar {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        margin-right: 1em;
+      }
+
+      .partie-message {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        .utilisateur {
+          color: grey;
+        }
+      }
+    }
+
+    form{
+      position: fixed;
+      top: 80vh;
+      width: 65%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+
+      .inputMessage{
+        width: 60% ;
+      }
+
+      button{
+        width: 30%;
+        height: 40px;
+      }
+    }
+    
+  }

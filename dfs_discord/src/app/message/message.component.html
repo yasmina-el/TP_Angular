@@ -1,0 +1,32 @@
+<div class="liste-message">
+  @for (item of listMsg; track $index) {
+    <div class="message">
+      <img
+        class="avatar"
+        src="https://play-lh.googleusercontent.com/0goocG7RJZDZ41ShfBPl-h7ctwHKHjqzn4nSImyL8_RWyXqeYNKw-CdGAKhgPGZG5Es"
+      />
+      <div class="partie-message">
+        <div class="utilisateur">{{item.email}}</div>
+        <p class="contenu">
+          {{item.message}}
+        </p>
+      </div>
+    </div>
+
+
+  }
+
+    <form [formGroup]="formulaire_msg" (ngSubmit)="Onsubmit()">
+      
+        <mat-form-field class="inputMessage">
+          <mat-label>Entrer votre message</mat-label>
+          <textarea
+          matInput formControlName="message"
+         ></textarea>
+        </mat-form-field>
+
+        <button type="submit" mat-flat-button color="primary">
+          Envoyer
+        </button>
+      </form>
+  </div>
